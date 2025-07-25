@@ -57,7 +57,8 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node ./api/server.js",
     "client": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider --legacy-peer-deps build",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "build:netlify": "CI= npm install --legacy-peer-deps && react-scripts build",
     "test": "react-scripts eject",
     "eject": "react-scripts eject"
   },

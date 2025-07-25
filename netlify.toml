@@ -1,6 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:netlify"
+  command = "npm install --legacy-peer-deps && npm run build"
   publish = "build"
+  GENERATE_SOURCEMAP = "false"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [build.environment]
   NODE_VERSION = "16"
